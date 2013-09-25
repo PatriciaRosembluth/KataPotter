@@ -1,12 +1,15 @@
 
 public class KataPotter {
 
-	public String CalcularPrecio(int numero) 
+	public int CalcularPrecio(int numero) 
 	{
 		if(numero==0)
-			return "0";
+			return 0;
 		else
-			return "Error";
+			if(numero==1)
+				return 8;
+			else
+				return -1;
 	}
 
 }
