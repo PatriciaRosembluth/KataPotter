@@ -28,13 +28,24 @@ public class testKataPotter
 	}
 
 	@Test
-	public void testDecuentosSimples()
+	public void testDescuentosSimples()
 	{
 		 assertEquals(15,2,kp.CalcularPrecioConDescuento("1 2"));
 		 assertEquals(21,6,kp.CalcularPrecioConDescuento("1 3 5"));
 		 assertEquals(25,6,kp.CalcularPrecioConDescuento("1 2 3 4"));
 		 assertEquals(30,0,kp.CalcularPrecioConDescuento("1 2 3 4 5"));
 	}
+	
+	@Test
+	public void testDescuentosEspeciales()
+	{
+		assertEquals(23,2,kp.CalcularPrecioConDescuento("1 1 2"));
+		assertEquals(30,4,kp.CalcularPrecioConDescuento("1 1 2 2"));
+		assertEquals(40,8,kp.CalcularPrecioConDescuento("1 1 2 3 3 4"));
+		assertEquals(38,0,kp.CalcularPrecioConDescuento("1 2 2 3 4 5"));
+	}
+	
+	
 
 	
 }
