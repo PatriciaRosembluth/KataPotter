@@ -9,27 +9,22 @@ import org.junit.Test;
 public class testKataPotter 
 {
 	KataPotter kp;
-	ArrayList<Integer> lista;
-	int tam;
+	String lista;
 	
 	@Before
 	public void setUp()
 	{
 		kp=new KataPotter();
-		lista = new ArrayList<Integer>();
+		lista = new String();
 	}
 
 	@Test
-	public void testNoSeComproNingunLibro() 
+	public void testBasico() 
 	{
-		tam=0;
-		assertEquals(0,kp.CalcularPrecio(tam));
+		int cantidad=3;
+		assertEquals(0,kp.CalcularPrecio(0));
+		assertEquals(8,kp.CalcularPrecio(1));
+		assertEquals(8*cantidad ,kp.CalcularPrecio(cantidad));
 	}
 
-	@Test
-	public void testSeComproUnSoloLibro()
-	{
-		tam=1;
-		assertEquals(8,kp.CalcularPrecio(tam));
-	}
 }

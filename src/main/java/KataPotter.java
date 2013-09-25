@@ -1,15 +1,9 @@
 
 public class KataPotter {
 
-	public int CalcularPrecio(int numero) 
+	public int CalcularPrecio(int cantidad) 
 	{
-		if(numero==0)
-			return 0;
-		else
-			if(numero==1)
-				return 8;
-			else
-				return -1;
+		return 8*cantidad;
 	}
 
 }
